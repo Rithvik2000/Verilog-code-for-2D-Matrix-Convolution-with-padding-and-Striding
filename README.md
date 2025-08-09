@@ -26,7 +26,6 @@ Input Waveform
 <img width="1877" height="409" alt="Screenshot 2025-07-20 162549" src="https://github.com/user-attachments/assets/7a47819a-1cc2-480b-af67-d828ba77e18b" />
 
 
-Output Waveform
 <img width="1885" height="424" alt="image" src="https://github.com/user-attachments/assets/57f610a3-8214-4738-9b3d-c710ee741906" />
 
 Post Synthesis Report (for FPGA )
