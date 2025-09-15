@@ -1,0 +1,37 @@
+# Create a virtual clock with a T ns period where clk is initialized
+create_clock -period 20.000 -name virtual -waveform {0.000 10.000} -add [get_ports CLK]
+
+
+# Set correct input delays (min should be <= max)
+set_input_delay -clock virtual -min 1.5 [get_ports {A_in}]
+set_input_delay -clock virtual -max 2 [get_ports {A_in}]
+
+set_input_delay -clock virtual -min 1.5 [get_ports {B_in}]
+set_input_delay -clock virtual -max 2 [get_ports {B_in}]
+
+set_input_delay -clock virtual -min 1.5 [get_ports {N1}]
+set_input_delay -clock virtual -max 2 [get_ports {N1}]
+
+set_input_delay -clock virtual -min 1.5 [get_ports {M1}]
+set_input_delay -clock virtual -max 2 [get_ports {M1}]
+
+set_input_delay -clock virtual -min 1.5 [get_ports {S1}]
+set_input_delay -clock virtual -max 2 [get_ports {S1}]
+
+set_input_delay -clock virtual -min 1.5 [get_ports {P1}]
+set_input_delay -clock virtual -max 2 [get_ports {P1}]
+
+set_input_delay -clock virtual -min 1.5 [get_ports {P1}]
+set_input_delay -clock virtual -max 2 [get_ports {P1}]
+
+set_input_delay -clock virtual -min 1.5 [get_ports {O1}]
+set_input_delay -clock virtual -max 2 [get_ports {O1}]
+
+
+# Set correct output delays (min should be <= max)
+set_output_delay -clock virtual -min 1.5 [get_ports {FINAL_OUT}]
+set_output_delay -clock virtual -max 2 [get_ports {FINAL_OUT}]
+
+# Set correct output delays (min should be <= max)
+set_output_delay -clock virtual -min 1.5 [get_ports {Done}]
+set_output_delay -clock virtual -max 2 [get_ports {Done}]
